@@ -31,15 +31,23 @@ public static int[] largestInRows(int[][] arr){
   }
   return out;
 }
+
+public static int sum(int[][] arr){
+  return sum(sumRows(arr));
+}
+
   public static void main(String[] args){
     int[] a={4,53,8,2};
     int[][] b={{2,6,4,3,5},{4,34,2}};
     //System.out.println(sum(a));
     //System.out.println(largest(a));
+    /*
     int[] out=sumRows(b);
     int[] out1=largestInRows(b);
     for (int i=0;i<out.length ; i++) {
     System.out.println(out1[i]);
   }
+  */
+      System.out.println(sum(b));
 }
 }
