@@ -75,7 +75,7 @@ public static boolean isLocationMagic(int[][] arr, int row, int col){
 }
 
   public static void main(String[] args){
-
+/*
     int[] a={4,53,8,2};
     int[][] b={{2,6,4,3,5},{4,34,2}};
     //System.out.println(sum(a));
@@ -106,7 +106,6 @@ System.out.println( ArrayOps.sum(A));   //this calls the overloaded 2d array ver
 int[][]c=transverse(b);
 System.out.println(Arrays.toString(c[0]));
 System.out.println(Arrays.deepToString(transverse(b)));
-*/
 //System.out.println(Arrays.toString(sumCols(b)));
 
 
@@ -133,5 +132,6 @@ int[][]E = {
 
 System.out.println(isLocationMagic(E, 0, 1)); //→ False  //  2 + 4 + 2  !=  4 + 2
 System.out.println(isLocationMagic(E, 1, 1)); //→  True  //   2 + 2 + 2 == 4 + 2
+*/
 }
 }
