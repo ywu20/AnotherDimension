@@ -27,7 +27,7 @@ System.out.println( ArrayOps.sum(A));   //this calls the overloaded 2d array ver
 
 int[][]c=ArrayOps.transverse(b);
 System.out.println(Arrays.toString(c[0])); //[[2,4],[6,34],[4,2],[3],[5]]
-System.out.println(Arrays.deepToString(ArrayOps.transverse(b)));//[[2,4],[6,34],[4,2],[3],[5]]
+System.out.println(Arrays.deepToString(ArrayOps.transverse(b)));//[[2,4],[6,34],[4,2],[3,0],[5,0]]
 System.out.println(Arrays.toString(ArrayOps.sumCols(b)));//[6,40,6,3,5]
 
 
