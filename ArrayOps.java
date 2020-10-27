@@ -48,13 +48,24 @@ public static int[][] transverse(int[][] arr){
       trans[col][row]=arr[row][col];
     }
   }
-  System.out.println(Arrays.toString(trans[0]));
+//  System.out.println(Arrays.toString(trans[0]));
   return trans;
 }
 
 public static int[] sumCols(int[][] arr){
   return sumRows(transverse(arr));
 }
+
+public static boolean isRowMagic(int[][] arr){
+  int[] rowSum = sumRows(arr);
+  for(int i=1;i<rowSum.length;i++){
+    if(rowSum[i-1]!=rowSum[i]){
+      return false;
+    }
+  }
+  return true;
+}
+
   public static void main(String[] args){
     int[] a={4,53,8,2};
     int[][] b={{2,6,4,3,5},{4,34,2}};
@@ -87,6 +98,11 @@ int[][]c=transverse(b);
 System.out.println(Arrays.toString(c[0]));
 System.out.println(Arrays.deepToString(transverse(b)));
 */
-System.out.println(Arrays.toString(sumCols(b)));
+//System.out.println(Arrays.toString(sumCols(b)));
+
+int[][] d={ {  1,  2, 3, 4 },
+   {  2, 3,  4,  1 },
+   { 3, 4,  1, 2 } };  //this is rowMagic but NOT colMagic
+System.out.println(isRowMagic(d));
 }
 }
