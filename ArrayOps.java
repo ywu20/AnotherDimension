@@ -37,6 +37,21 @@ public static int sum(int[][] arr){
   return sum(sumRows(arr));
 }
 
+public static int[][] transverse(int[][] arr){
+  int maxcol=0;
+  for(int i=0; i<arr.length;i++){
+    maxcol = Math.max(maxcol,arr[i].length);
+  }
+  int[][] trans= new int[maxcol][arr.length];
+  for (int row=0; row<arr.length;row++){
+    for(int col=0;col<arr[row].length;col++){
+      trans[col][row]=arr[row][col];
+    }
+  }
+  System.out.println(Arrays.toString(trans[0]));
+  return trans;
+}
+
   public static void main(String[] args){
     int[] a={4,53,8,2};
     int[][] b={{2,6,4,3,5},{4,34,2}};
@@ -65,5 +80,9 @@ System.out.println( ArrayOps.sum(B)) ;//expected output:9
 
 System.out.println( ArrayOps.sum(A));   //this calls the overloaded 2d array version! expected output:6
 */
+int[][]c=transverse(b);
+System.out.println(Arrays.toString(c[0]));
+System.out.println(Arrays.deepToString(transverse(b)));
+
 }
 }
