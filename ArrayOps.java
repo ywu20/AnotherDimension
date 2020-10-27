@@ -70,7 +70,12 @@ public static boolean isColMagic(int[][] arr){
   return isRowMagic(transverse(arr));
 }
 
+public static boolean isLocationMagic(int[][] arr, int row, int col){
+  return (sum(arr[row]) == sumCols(arr)[col]);
+}
+
   public static void main(String[] args){
+
     int[] a={4,53,8,2};
     int[][] b={{2,6,4,3,5},{4,34,2}};
     //System.out.println(sum(a));
@@ -104,6 +109,7 @@ System.out.println(Arrays.deepToString(transverse(b)));
 */
 //System.out.println(Arrays.toString(sumCols(b)));
 
+
 int[][] d={ {  1,  2, 3, 4 },
    {  2, 3,  4,  1 },
    { 3, 4,  1, 2 } };  //this is rowMagic but NOT colMagic
@@ -115,10 +121,17 @@ int[][] e=  { {  1,  1, 1 },
   int[][] f= { {  2,  2, 2 },
       {  2, 2, 2 } };  //this is both colMagic AND rowMagic
 //System.out.println(isRowMagic(d));
-System.out.println(isColMagic(d));
+//System.out.println(isColMagic(d));
 //System.out.println(isRowMagic(e));
-System.out.println(isColMagic(e));
+//System.out.println(isColMagic(e));
 //System.out.println(isRowMagic(f));
-System.out.println(isColMagic(f));
+//System.out.println(isColMagic(f));
+//System.out.println(isLocationMagic(f,0,0));
+int[][]E = {
+{  2,  4, 2 },
+{  2, 2, 2 } };
+
+System.out.println(isLocationMagic(E, 0, 1)); //→ False  //  2 + 4 + 2  !=  4 + 2
+System.out.println(isLocationMagic(E, 1, 1)); //→  True  //   2 + 2 + 2 == 4 + 2
 }
 }
