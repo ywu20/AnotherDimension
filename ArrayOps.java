@@ -66,6 +66,10 @@ public static boolean isRowMagic(int[][] arr){
   return true;
 }
 
+public static boolean isColMagic(int[][] arr){
+  return isRowMagic(transverse(arr));
+}
+
   public static void main(String[] args){
     int[] a={4,53,8,2};
     int[][] b={{2,6,4,3,5},{4,34,2}};
@@ -103,6 +107,18 @@ System.out.println(Arrays.deepToString(transverse(b)));
 int[][] d={ {  1,  2, 3, 4 },
    {  2, 3,  4,  1 },
    { 3, 4,  1, 2 } };  //this is rowMagic but NOT colMagic
-System.out.println(isRowMagic(d));
+
+int[][] e=  { {  1,  1, 1 },
+      {  2, 2, 2 },
+      { 3,  3, 3 } };  //this is colMagic but NOT rowMagic
+
+  int[][] f= { {  2,  2, 2 },
+      {  2, 2, 2 } };  //this is both colMagic AND rowMagic
+//System.out.println(isRowMagic(d));
+System.out.println(isColMagic(d));
+//System.out.println(isRowMagic(e));
+System.out.println(isColMagic(e));
+//System.out.println(isRowMagic(f));
+System.out.println(isColMagic(f));
 }
 }
