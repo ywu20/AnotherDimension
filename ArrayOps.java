@@ -52,6 +52,9 @@ public static int[][] transverse(int[][] arr){
   return trans;
 }
 
+public static int[] sumCols(int[][] arr){
+  return sumRows(transverse(arr));
+}
   public static void main(String[] args){
     int[] a={4,53,8,2};
     int[][] b={{2,6,4,3,5},{4,34,2}};
@@ -79,10 +82,11 @@ System.out.println(Arrays.toString(ArrayOps.largestInRows(A)));//expected output
 System.out.println( ArrayOps.sum(B)) ;//expected output:9
 
 System.out.println( ArrayOps.sum(A));   //this calls the overloaded 2d array version! expected output:6
-*/
+
 int[][]c=transverse(b);
 System.out.println(Arrays.toString(c[0]));
 System.out.println(Arrays.deepToString(transverse(b)));
-
+*/
+System.out.println(Arrays.toString(sumCols(b)));
 }
 }
