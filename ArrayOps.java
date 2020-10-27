@@ -24,14 +24,22 @@ public class ArrayOps{
     return out;
   }
 
+public static int[] largestInRows(int[][] arr){
+  int[] out = new int[arr.length];
+  for (int i=0;i<arr.length;i++){
+    out[i]=largest(arr[i]);
+  }
+  return out;
+}
   public static void main(String[] args){
     int[] a={4,53,8,2};
     int[][] b={{2,6,4,3,5},{4,34,2}};
     //System.out.println(sum(a));
     //System.out.println(largest(a));
     int[] out=sumRows(b);
+    int[] out1=largestInRows(b);
     for (int i=0;i<out.length ; i++) {
-    System.out.println(out[i]);
+    System.out.println(out1[i]);
   }
 }
 }
